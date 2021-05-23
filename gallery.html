@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title> CLC </title>
+    <meta name="description" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/portfolio.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- JS -->
+    <script type="module" src="./js/main.js"></script>
+    <script defer src="./js/portfolio.js"></script>
+
+    <!-- Other -->
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="/">
+                <img src="./media/images/logoHvid.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li>
+                    <a href="./gallery.html">Galleri</a>
+                </li>
+                <li>
+                    <a href="./references.html">Referencer</a>
+                </li>
+                <li>
+                    <a href="./partners.html">Partnere</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+    <div id="htmlOverlay" class="htmlOverlay"></div>
+
+    <div class="picture2">
+        <main class="portfolio__main">
+            <div class="main_intro">
+                <div class="picture3">PORTFOLIO</div>
+            </div>
+    </div>
+
+
+
+
+
+    <!-- Portfolio-->
+
+    <div class="fiterBtnContainer">
+
+       <button class="button"><div class="btn1" onclick="filterImg('picture')" class="filterBtn">
+            Alle
+        </div></button> 
+        <button class="button"><div class="btn2" onclick="filterImg('trappe')" class="filterBtn">
+            Trapper
+        </div></button> 
+        <button class="button"><div class="btn3" onclick="filterImg('altan')" class="filterBtn">
+            Altaner
+        </div></button> 
+        <button class="button"><div class="btn4" onclick="filterImg('special')" class="filterBtn">
+            Special
+        </div></button> 
+    </div>
+
+    <div class="container_portfolio">
+        <img class="picture altan" src="/media/images/altansort.png" alt="Altan" style="width:360px">
+
+        <img class="picture altan" src="/media/images/altanbil.png" alt="Altan" style="width:360px">
+
+        <img class="picture altan" src="/media/images/gelander.png" alt="Altan" style="width:360px">
+
+        <img class="picture altan" src="/media/images/gelander3.png" alt="Altan" style="width:360px">
+
+        <img class="picture special" src="/media/images/bro1.png" alt="bro" style="width:360px">
+
+        <img class="picture trappe" src="/media/images/trappenedgang.png" alt="trappe" style="width:360px">
+
+        <img class="picture trappe" src="/media/images/trappeopgang.png" alt="trappe" style="width:360px">
+
+        <img class="picture special" src="/media/images/toender1.png" alt="toender" style="width:360px">
+
+        <img class="picture special" src="/media/images/toender2.png" alt="Toender" style="width:360px">
+
+        <img class="picture special" src="/media/images/toender3.png" alt="Toender1" style="width:360px">
+
+        <img class="picture special" src="/media/images/drstudie1.png" alt="DR studiet" style="width:360px">
+
+        <img class="picture special" src="/media/images/drstudie3.png" alt="DR studiet" style="width:360px">
+
+    </div>
+
+
+    </main>
+
+
+    <footer>
+        <div class="footer__itemWrapper">
+            <div class="footer__adress">
+                <strong>CLC Rustfri ApS</strong><br><br>
+                Norgesvej 10 <br>
+                8450 Hammel <br>
+                Tlf: 2821 4224 <br>
+            </div>
+        </div>
+        <div class="footer__itemWrapper">
+            <div class="footer__certificate">
+                <p>CLC Rustfri støtter:</p>
+                <img src="./media/images/fkn_logo.gif" alt="FKN Logo">
+                <p>CLC Rustfri er certificeret af DANAK og Inspecta</p>
+            </div>
+        </div>
+        <div class="footer__itemWrapper">
+            <div class="footer__some">
+                <p>Se mere her:</p>
+                <div class="some__imgCont">
+                    <a href="">
+                        <img src="./media/images/some/face.png" alt="Facebook logo">
+                    </a>
+                    <a href="">
+                        <img src="./media/images/some/insta.png" alt="Instagram logo">
+                    </a>
+                    <a href="">
+                        <img src="./media/images/some/link.png" alt="LinkedIn logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

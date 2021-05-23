@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title> CLC </title>
+    <meta name="description" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="kontakt.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!--Appi-->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
+    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- JS -->
+    <script type="module" src="./js/headerFooter.js"></script>
+
+    <!-- Other -->
+
+</head>
+
+<body>
+    <div class="body__wrapper">
+        <header>
+            <div>
+                <a href="/">
+                    <img src="./media/images/logoHvid.png" alt="Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav__links">
+                    <li>
+                        <a href="./gallery.html">Galleri</a>
+                    </li>
+                    <li>
+                        <a href="./references.html">Referencer</a>
+                    </li>
+                    <li>
+                        <a href="./partners.html">Partnere</a>
+                    </li>
+                    <li>
+                        <a href="./contact.html">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </header>
+        <div id="htmlOverlay" class="htmlOverlay"></div>
+
+<div class="billede"> <main class="kontakt__main">
+    <div class="main_intro">
+        </div>
+<div class="billede1">KONTAKT INFO</div>
+</div>
+
+       
+            
+            
+
+
+
+         
+ <div class="kontaktinfo">
+    <p>
+        Du er altid velkommen til at kontakte mig over telefonen, eller sende en mail. <br> 
+        Til en uforpligtede snak, omkring dine ønsker og behov!</p>
+
+       <a href="tel:28214224"> <img src="media/images/gallery/telefon.png" class="telefon"></a>
+
+       
+        <a href="mailto:info@clc-rustfri.dk"> <img src="media/images/gallery/mail.png" class="mail"></a>
+    </div>
+
+        <style>
+
+            body {
+                margin: 0;
+                padding: 0;
+              }
+            
+            #map {
+                position: absolute;
+                top: 1000px;
+                bottom: 10px;
+                width: 100%;
+                height: 50%;
+            }
+            
+            .marker {
+               background-image: url('mapbox-icon.png');
+               background-size: cover;
+               width: 50px;
+               height: 50px;
+               border-radius: 50%;
+               cursor: pointer;
+            }
+            
+            .mapboxgl-popup {
+               max-width: 200px;
+            }
+            
+            .mapboxgl-popup-content {
+               text-align: center;
+               font-family: 'Open Sans', sans-serif;
+            }
+                </style>
+            </head>
+            <body>
+            
+            <div id='map'></div>
+            
+            <script>
+            
+            mapboxgl.accessToken = 'pk.eyJ1IjoiY2xhcmFiaXJrIiwiYSI6ImNrbjhxeDAxZzEwa2Eyd282bWx3bWpqa3YifQ.rQcU1ZFEzilWUU-rGZX7CA';
+            
+            var map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/clarabirk/ckots480a1xlx17nvqqhvdxva',
+              center: [9.87, 56.25],
+              zoom: 11
+            });
+            
+            var geojson = {
+              type: 'FeatureCollection',
+              features: [{
+                type: 'Feature',
+                geometry: {
+                  type: 'Point',
+                  coordinates: [9.85, 56.25]
+                },
+                properties: {
+                  title: 'CLC-Rustfri',
+                  description: 'Norgesvej 10, 8450 Hammel'
+                }
+              }]
+            };
+            
+            // add markers to map
+            geojson.features.forEach(function(marker) {
+            
+            // create a HTML element for each feature
+            var el = document.createElement('div');
+            el.className = 'marker';
+            
+            // make a marker for each feature and add to the map
+            new mapboxgl.Marker(el)
+              .setLngLat(marker.geometry.coordinates)
+              .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+              .addTo(map);
+            });
+            </script>
+            
+        </main>
+
+    </div>
+
+    <footer>
+        <div class="footer__itemWrapper">
+            <div class="footer__adress">
+                <strong>CLC Rustfri ApS</strong><br><br>
+                Norgesvej 10 <br>
+                8450 Hammel <br>
+                Tlf: 2821 4224 <br>
+            </div>
+        </div>
+        <div class="footer__itemWrapper">
+            <div class="footer__certificate">
+                <p>CLC Rustfri støtter:</p>
+                <img src="./media/images/fkn_logo.gif" alt="FKN Logo">
+                <p>CLC Rustfri er certificeret af DANAK og Inspecta</p>
+            </div>
+        </div>
+        <div class="footer__itemWrapper">
+            <div class="footer__some">
+                <p>Se mere her:</p>
+                <div class="some__imgCont">
+                    <a href="">
+                        <img src="./media/images/some/face.png" alt="Facebook logo">
+                    </a>
+                    <a href="">
+                        <img src="./media/images/some/insta.png" alt="Instagram logo">
+                    </a>
+                    <a href="">
+                        <img src="./media/images/some/link.png" alt="LinkedIn logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>

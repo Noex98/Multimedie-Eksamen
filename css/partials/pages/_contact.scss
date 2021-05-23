@@ -1,0 +1,92 @@
+.kontaktinfo{
+    margin-left: 50px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 1.3rem;
+    text-align: center;
+    
+    
+    
+   
+ 
+}
+
+.telefon{
+ max-width: 8%;
+ max-height: 8%;
+ margin-bottom: 500px;
+ margin-top: 30px;
+ 
+}
+
+.mail{
+ max-width: 8%;
+ max-width: 8%;
+ margin-left: 100px;
+ margin-bottom: 500px;
+
+}
+.main_intro {
+ position: relative;
+ height: 100px;
+
+ display: flex;
+ justify-content: center;
+
+     -ms-flex-align: center;
+         align-items: center;
+ background-color: rgba(0, 0, 0, 0.363);
+ background-blend-mode: darken;
+ background-image: url("media/images/gallery/svej.jpg");
+ background-size: cover;
+ background-position: center;
+ background-attachment: fixed;
+}
+
+.kontakt__main .main_intro {
+ position: relative;
+ height: 100vh;
+ display: -webkit-box;
+ display: -ms-flexbox;
+ display: flex;
+ -webkit-box-pack: center;
+     -ms-flex-pack: center;
+         justify-content: center;
+ -webkit-box-align: center;
+     -ms-flex-align: center;
+         align-items: center;
+ background-image: url("../media/images/gallery/svejs.jpg");
+ background-size: cover;
+ background-position: center;
+}    
+
+.billede{
+ position: relative;
+ text-align: center;
+ color: white;
+}
+
+.billede1{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+
+ .kontaktinfo {
+     text-align: center;
+     display: block;
+     max-width: 100%;
+ }
+
+
+ .kontaktinfo p {
+     text-align: center;
+     display: block;
+     
+ }
+}
