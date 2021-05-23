@@ -55,7 +55,6 @@ function setVariable () {
 
 setTimeout(() => {setVariable()}, 100);
 
-
 addEventListener('resize', () => {
     setVariable();
-})
+});
