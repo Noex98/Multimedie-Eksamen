@@ -20,11 +20,7 @@ function burgerClick(){
 
 	//animate Links
 	navLinks.forEach((link, index) => {
-		if (link.style.animation) {
-			link.style.animation = ''
-		} else {
-			link.style.animation =`navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
-		}
+		link.style.animation = link.style.animation? '' : link.style.animation =`navLinkFade 0.5s ease forwards ${index / 7 + 0.2}s`;
 	});
 
 	//Burger Animation
@@ -46,8 +42,6 @@ addEventListener('scroll', () => {
         header.classList.add('header--scrolled')
     }
 });
-
-
 
 
 //#########
