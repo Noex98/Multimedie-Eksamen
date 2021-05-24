@@ -1,7 +1,7 @@
 .partner__main {
     padding-bottom: 40px;
     .banner{
-        background-image: url(/media/images/partner/pexels-magda-ehlers-2569844.jpg);
+        background-image: url('../media/images/partner/pexels-magda-ehlers-2569844.jpg');
         background-color:rgba(0, 0, 0, 0.363);
         background-blend-mode: darken;
         background-position: center;
@@ -35,39 +35,36 @@
         background-color: rgb(220, 220, 220);
     }
 
-#textDisplay{
-    font-size: 20px;
-    width: 38vw;
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-    background-blend-mode: multiply,multiply;
-    color: rgb(252, 252, 252);
-    padding: 25px;
-    border-radius: 3px;
-    box-shadow: 0 12px 15px -8px black;
-
-
-}
-
-.mobileText{
-    display:none;
-}
-
-@media screen and (max-width: 768px) {
     #textDisplay{
-    display: none;
+        font-size: 20px;
+        width: 38vw;
+        padding: 20px;
+        text-align: center;
+        margin: 0 auto;
+        background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+        background-blend-mode: multiply,multiply;
+        color: rgb(252, 252, 252);
+        padding: 25px;
+        border-radius: 3px;
+        box-shadow: 0 12px 15px -8px black;
     }
     .mobileText{
-        color: black;
-        display:block;
-        text-align: center;
-        
+        display:none;
     }
-    img{padding: 0;
-    margin-top:80px;
-    width: 300px;
-}
-}
+
+    @media screen and (max-width: 768px) {
+        #textDisplay{
+        display: none;
+        }
+        .mobileText{
+            color: black;
+            display:block;
+            text-align: center;
+        }
+        img{
+            padding: 0;
+            margin-top:80px;
+            width: 300px;
+        }
+    }
 }

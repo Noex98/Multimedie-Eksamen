@@ -605,7 +605,7 @@ button:active {
 }
 
 .partner__main .banner {
-  background-image: url(/media/images/partner/pexels-magda-ehlers-2569844.jpg);
+  background-image: url("../media/images/partner/pexels-magda-ehlers-2569844.jpg");
   background-color: rgba(0, 0, 0, 0.363);
   background-blend-mode: darken;
   background-position: center;
