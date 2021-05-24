@@ -331,6 +331,18 @@ footer .footer__some .some__imgCont {
 footer .footer__some .some__imgCont img {
   margin: 12px;
   width: 64px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 12px 15px -8px black;
+          box-shadow: 0 12px 15px -8px black;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+footer .footer__some .some__imgCont img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media only screen and (max-width: 768px) {
@@ -971,28 +983,15 @@ footer .footer__some .some__imgCont img {
   }
 }
 
-.contact__main .kontaktinfo {
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-.contact__main .telefon {
-  max-width: 8%;
-  max-height: 8%;
-  margin-bottom: 500px;
-  margin-top: 30px;
-}
-
-.contact__main .mail {
-  max-width: 8%;
-  max-width: 8%;
-  margin-left: 100px;
-  margin-bottom: 500px;
+.contact__main {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(0, 0, 0, 0.15))), radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
+  background-blend-mode: multiply,multiply;
 }
 
 .contact__main .banner {
   background-image: url("../media/images/contact/svej.jpg");
-  background-color: rgba(0, 0, 0, 0.363);
+  background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: darken;
   background-position: center;
   max-width: 100%;
@@ -1008,20 +1007,71 @@ footer .footer__some .some__imgCont img {
   position: relative;
 }
 
-.contact__main .billede1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 1.3rem;
+.contact__main .main__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 12px;
+  height: 50vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.contact__main #map {
+.contact__main .main__info div {
+  background-color: #cfcfcf;
+  border-radius: 3px;
+  padding: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 12px 15px -8px black;
+          box-shadow: 0 12px 15px -8px black;
+}
+
+.contact__main .main__info div img {
+  width: 100%;
+  max-width: 200px;
+  padding-bottom: 36px;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.contact__main .main__info div img:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.contact__main .main__info div p {
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.contact__main .main__map .map__header {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.contact__main .main__map #map {
   height: 50vh;
 }
 
-.contact__main .marker {
+.contact__main .main__map #map .marker {
   background-image: url("../media/images/contact/mapbox-icon.png");
   background-size: cover;
   width: 50px;
@@ -1030,25 +1080,26 @@ footer .footer__some .some__imgCont img {
   cursor: pointer;
 }
 
-.contact__main .mapboxgl-popup {
+.contact__main .main__map #map .mapboxgl-popup {
   max-width: 200px;
 }
 
-.contact__main .mapboxgl-popup-content {
+.contact__main .main__map #map .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: black;
 }
 
 @media only screen and (max-width: 768px) {
-  .contact__main .kontaktinfo {
-    text-align: center;
-    display: block;
-    max-width: 100%;
+  .contact__main .main__info {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .contact__main .kontaktinfo p {
-    text-align: center;
-    display: block;
+  .contact__main .main__info div {
+    margin: 30px auto;
   }
 }
 
@@ -1281,11 +1332,8 @@ footer .footer__some .some__imgCont img {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(0, 0, 0, 0.15))), radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
   background-blend-mode: multiply,multiply;
-<<<<<<< HEAD
-=======
   -webkit-box-shadow: 0 12px 15px -8px black;
           box-shadow: 0 12px 15px -8px black;
->>>>>>> ef377527fac1caac1c3413bd3a1ed93e5fa6786a
 }
 
 @media only screen and (max-width: 768px) {
