@@ -876,7 +876,7 @@ button:active {
 }
 
 .index__main .main__video .video__short {
-  max-height: 75vh;
+  max-height: 70vh;
   overflow: hidden;
 }
 
