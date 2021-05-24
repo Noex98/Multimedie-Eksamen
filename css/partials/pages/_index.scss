@@ -11,9 +11,6 @@
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-
-       
-    
         .intro__logo {
             width:30vw;
             img {
@@ -192,6 +189,9 @@
         .main__gallery {
             #nextBtn, #prevBtn {
                 display:none;
+            }
+            #slider {
+                overflow-x:scroll;
             }
         }
     }

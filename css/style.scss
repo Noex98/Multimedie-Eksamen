@@ -1,17 +1,15 @@
-//keyframes
-@import 'partials/keyframes';
-
-@import 'partials/resets'; // Resets
-@import 'partials/variables'; // Variables
+// Globals
+@import 'partials/resets';      // Resets
+@import 'partials/variables';   // Variables
+@import 'partials/keyframes';   // Keyframes
 
 //Components
-@import 'partials/header';
-@import 'partials/footer';
+@import 'partials/components/header';  // Header
+@import 'partials/components/footer';  // Footer
 
 // Pages || Full page styling
-@import 'partials/pages/gallery';
-@import 'partials/pages/references';
-@import 'partials/pages/partners';
-@import 'partials/pages/contact';
-@import 'partials/pages/index';
-
+@import 'partials/pages/portfolio';     // Portfolio 
+@import 'partials/pages/references';    // Referencer
+@import 'partials/pages/partners';      // Partners
+@import 'partials/pages/contact';       // Contact
+@import 'partials/pages/index';         // Front page

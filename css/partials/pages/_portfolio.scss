@@ -1,0 +1,362 @@
+.portfolio__main { // Lavede lige den her så global stylings ikke fuckede med kontakt siden :)
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #e4e4e4;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+
+  body {
+    height: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+
+  :root {
+    --footer-height:px;
+  }
+
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 5;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 36px;
+    -webkit-transition: 200ms;
+    transition: 200ms;
+    font-size: 1.3rem;
+  }
+
+  header .burger {
+    display: none;
+  }
+
+  header div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  header img {
+    height: 48px;
+  }
+
+  header nav {
+    width: 70%;
+  }
+
+  header nav ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .header--scrolled {
+    background-color: rgba(0, 0, 0, 0.589);
+    padding: 24px 24px;
+    font-size: 1.1rem;
+  }
+
+  .button {
+    width: 35%;
+    margin-right: 25px;
+    margin-left: 45px;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .htmlOverlay {
+      position: fixed;
+      z-index: 4;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: rgba(0, 0, 0, 0);
+      pointer-events: none;
+      -webkit-transition: 200ms;
+      transition: 200ms;
+    }
+    .overlay--visible {
+      background: rgba(0, 0, 0, 0.45);
+      pointer-events: auto;
+    }
+    header .burger {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      display: block;
+      cursor: pointer;
+      -webkit-transition: 300ms;
+      transition: 300ms;
+    }
+    header .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: #cfcfcf;
+      margin: 5px;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+    header .burger-toggle .line1 {
+      -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+              transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    header .burger-toggle .line2 {
+      opacity: 0;
+    }
+    header .burger-toggle .line3 {
+      -webkit-transform: rotate(45deg) translate(-5px, -6px);
+              transform: rotate(45deg) translate(-5px, -6px);
+    }
+    header .nav-active {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      max-width: none;
+    }
+    header nav {
+      max-width: 0;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.555);
+      -webkit-backdrop-filter: blur(8px);
+              backdrop-filter: blur(8px);
+      width: 50%;
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%);
+      -webkit-transition: -webkit-transform .25s ease-in;
+      transition: -webkit-transform .25s ease-in;
+      transition: transform .25s ease-in;
+      transition: transform .25s ease-in, -webkit-transform .25s ease-in;
+    }
+    header nav ul {
+      position: static;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly;
+      height: 100%;
+      padding: 12px 0;
+    }
+    header nav ul li {
+      opacity: 0;
+    }
+  }
+
+  .body__wrapper {
+    min-height: 100%;
+    margin-bottom: calc(-1 * var(--footer-height));
+    padding-bottom: var(--footer-height);
+  }
+
+
+
+  .main_intro {
+      position: relative;
+      height: 100px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background-color: rgba(0, 0, 0, 0.363);
+      background-blend-mode: darken;
+      background-image: url("../media/images/intro.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    
+    .portfolio__main .main_intro {
+      position: relative;
+      height: 100vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      background-image: url("../media/images/svejsning.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    html, body, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    }
+    
+    body {
+      background-color: #353535;
+      padding: 20px;
+      font-family: Arial;
+      line-height: 1;
+    }
+    
+    .container_portfolio {
+      margin-left: 45px;
+      margin-top: 100px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .picture {
+      margin: 10px;
+    }
+    
+    .picture2 {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    
+    .picture3 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate( -50%, -50%);
+      font-size: 1.5rem;
+    }
+
+    footer {
+      background-color: #353535;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 12px;
+    }
+    
+    footer .footer__itemWrapper {
+      width: 33.3%;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+    
+    footer .footer__adress {
+      padding: 12px;
+    }
+    
+    footer .footer__certificate {
+      padding: 12px;
+      text-align: center;
+    }
+    
+    footer .footer__some {
+      padding: 12px;
+      text-align: center;
+    }
+    
+    footer .footer__some .some__imgCont {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin: 0 auto;
+      max-width: 300px;
+    }
+    
+    footer .footer__some .some__imgCont img {
+      margin: 12px;
+      width: 64px;
+    }
+    
+    @media only screen and (max-width: 768px) {
+      footer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+      footer .footer__itemWrapper {
+        width: auto;
+      }
+    }
+
+  .button {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-left: 75px;
+    margin-top: 70px;
+    margin-bottom: -80px;
+    width: 15%;
+  }
+
+  button:hover {
+    background-color: grey;
+    border: grey solid;
+  }
+
+  button:active {
+    background: grey;
+  }
+}
