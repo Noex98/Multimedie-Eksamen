@@ -45,9 +45,9 @@ addEventListener('scroll', () => {
 });
 
 
-for (let i = 0; i < anchorTags; i++){
+for (let i = 0; i < anchorTags.length; i++){
 	if (anchorTags.item(i).href == window.location.href){
-		console.log(1);
+		navLinks.item(i).classList.add('navLink--active')
 	}
 }
 
