@@ -14,11 +14,12 @@
     .main__bgWrap {
         background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
         background-blend-mode: multiply,multiply;
+        padding-bottom: 100px;
     }
     .main__btnContainer{
         display: flex;
         justify-content: space-around;
-        margin: 50px 0;
+        padding: 50px 0;
 
         .filter--active{
             border-color: black grey grey black;
@@ -41,7 +42,8 @@
         flex-wrap: wrap;
         justify-content: space-around;
         img {
-            width:360px
+            width:360px;
+            border: 1px solid rgb(71, 71, 71);
         }
     }
 }

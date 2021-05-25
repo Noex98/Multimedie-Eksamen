@@ -43,8 +43,6 @@ function myInterval(){
     }
 }
 
-myInterval();
-
 var rotation = setInterval(() => {
     myInterval();
 }, rotationTime);

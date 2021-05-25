@@ -6,6 +6,7 @@ const burger = document.querySelector('.burger');
 const nav = document.getElementsByTagName('nav')[0];
 const navLinks = document.querySelectorAll('.nav__links li');
 const htmlOverlay = document.getElementById('htmlOverlay');
+const anchorTags = document.querySelectorAll('.nav__links li a')
 
 // When the burger menu is clicked
 function burgerClick(){
@@ -43,6 +44,12 @@ addEventListener('scroll', () => {
     }
 });
 
+
+for (let i = 0; i < anchorTags; i++){
+	if (anchorTags.item(i).href == window.location.href){
+		console.log(1);
+	}
+}
 
 //#########
 // Footer 
