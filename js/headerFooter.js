@@ -44,7 +44,7 @@ addEventListener('scroll', () => {
     }
 });
 
-
+// adds active class on the link you are at 
 for (let i = 0; i < anchorTags.length; i++){
 	if (anchorTags.item(i).href == window.location.href){
 		navLinks.item(i).classList.add('navLink--active')
