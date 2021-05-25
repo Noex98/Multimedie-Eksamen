@@ -17,7 +17,7 @@ header {
         align-items: center;
     }
     img {
-        height:48px;
+        height:64px;
     }
     nav {
         width:70%;
@@ -25,13 +25,16 @@ header {
             list-style: none;
             display:flex;
             justify-content: space-around;
+            li:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
 .header--scrolled {
     background-color: rgba(0, 0, 0, 0.589);
     //backdrop-filter: blur( 4px );
-    padding:24px 24px;
+    padding:20px 20px;
     font-size:1.1rem;
 }
 

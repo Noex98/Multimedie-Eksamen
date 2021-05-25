@@ -1,92 +1,76 @@
-.kontaktinfo{
-    margin-left: 50px;
-    margin-top: 80px;
-    margin-bottom: 40px;
-    font-size: 1.3rem;
-    text-align: center;
-    
-    
-    
-   
- 
-}
+.contact__main {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    .banner{
+        background-image: url("../media/images/contact/svej.jpg");
+        background-color:rgba(0, 0, 0, 0.4);
+    }
+    .main__info {
+        display:flex;
+        justify-content: space-around;
+        padding:12px;
+        height: 50vh;
+        align-items: center;
+        div {
+            background-color: rgb(207, 207, 207);
+            border-radius: 3px;
+            padding:36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: 0 12px 15px -8px black;
+            img {
+                width:100%;
+                max-width: 200px;
+                padding-bottom:36px;
+                transition: transform 200ms;
+            }
+            img:hover {
+                transform:scale(1.08);
+            }
+            p {
+                text-align: center;
+                color:black;
+                font-size:1.5rem;
+            }
+        }
+    }
 
-.telefon{
- max-width: 8%;
- max-height: 8%;
- margin-bottom: 500px;
- margin-top: 30px;
- 
-}
+    .main__map {
+        .map__header {
+            font-size:1.5rem;
+            text-align: center;
+            padding-bottom:24px;
+        }
+        #map {
+            height: 50vh;
+            .marker {
+                background-image: url("../media/images/contact/mapbox-icon.png");
+                background-size: cover;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .mapboxgl-popup {
+                max-width: 200px;
+            }
+            .mapboxgl-popup-content {
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                color:black;
+            }
+        }
+    }
 
-.mail{
- max-width: 8%;
- max-width: 8%;
- margin-left: 100px;
- margin-bottom: 500px;
-
-}
-.main_intro {
- position: relative;
- height: 100px;
-
- display: flex;
- justify-content: center;
-
-     -ms-flex-align: center;
-         align-items: center;
- background-color: rgba(0, 0, 0, 0.363);
- background-blend-mode: darken;
- background-image: url("media/images/gallery/svej.jpg");
- background-size: cover;
- background-position: center;
- background-attachment: fixed;
-}
-
-.kontakt__main .main_intro {
- position: relative;
- height: 100vh;
- display: -webkit-box;
- display: -ms-flexbox;
- display: flex;
- -webkit-box-pack: center;
-     -ms-flex-pack: center;
-         justify-content: center;
- -webkit-box-align: center;
-     -ms-flex-align: center;
-         align-items: center;
- background-image: url("../media/images/gallery/svejs.jpg");
- background-size: cover;
- background-position: center;
-}    
-
-.billede{
- position: relative;
- text-align: center;
- color: white;
-}
-
-.billede1{
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -50%);
- font-size: 1.3rem;
-}
-
-@media only screen and (max-width: 768px) {
-
-
- .kontaktinfo {
-     text-align: center;
-     display: block;
-     max-width: 100%;
- }
-
-
- .kontaktinfo p {
-     text-align: center;
-     display: block;
-     
- }
+    @media only screen and (max-width: 768px) {
+        .main__info {
+            height: auto;
+            flex-direction: column;
+            div {
+                margin: 30px auto;
+            }
+        }
+    }
 }

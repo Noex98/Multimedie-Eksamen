@@ -33,6 +33,12 @@ footer {
             img {
                 margin:12px;
                 width: 64px;
+                border-radius: 50%;
+                box-shadow: 0 12px 15px -8px black;
+                transition:transform 200ms;
+            }
+            img:hover {
+                transform:scale(1.1);
             }
         }
     }

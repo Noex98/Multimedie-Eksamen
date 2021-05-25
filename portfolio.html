@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,15 +12,15 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    
+    <link rel="stylesheet" href="./css/portfolio.css">
+
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
 
     <!-- JS -->
     <script type="module" src="./js/headerFooter.js"></script>
-    <script type="module" src="./js/referencer.js"></script>
-    <!-- Other -->
+    <script defer src="./js/portfolio.js"></script>
 
 </head>
 
@@ -47,6 +48,7 @@
                     </li>
                 </ul>
             </nav>
+
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -55,46 +57,54 @@
         </header>
         <div id="htmlOverlay" class="htmlOverlay"></div>
 
-        <main class="referencer__main">
-        <div class="banner">
-            <div class="bannertext">
-                <h1>Referencer</h1>
-            <p>For CLC Rustfri er det vigtigt at have gode kundekontakter, med vores mange år i branchen har vi massere af tilfredse kunder. Herunder ses udtaleser for både tidligere private kunder og virksomhedskunder.</p>
-        </div>
-        </div>
+        <main class="portfolio__main">
 
-        <div class="referenceContainer">
-    
+            <div class="banner">
+                <div class="bannertext">
+                    <h1>Portfolio</h1>
+                    <p> 
+                        Efter mange års erfaring, har jeg jeg lavet mange projekter.
+                        Her ser du et udsnit af hvad jeg kan lave.
+                    </p>
+                </div>
+            </div>
+            <div class="main__bgWrap">
+                <div class="main__btnContainer">
+                    <button>Alle</button> 
+                    <button data-tag="trappe">Trapper</button> 
+                    <button data-tag="altan">Altaner</button> 
+                    <button data-tag="special">Special</button> 
+                </div>
 
-      
-            <div class="imgContainer" id="personImgContainer">
-                <img class="personImg" src="media/images/referencer/person1.jpg">
-                <i class="mobileText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam justo ante, ullamcorper non accumsan ac, tempor non ex." </i>
-                <i class="mobileText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam justo ante, ullamcorper non accumsan ac, tempor non ex." </i>
-                <img class="personImg" src="media/images/referencer/person2.jpg">
-                
-                <img class="personImg" src="media/images/referencer/person3.jpg">
-                <i class="mobileText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam justo ante, ullamcorper non accumsan ac, tempor non ex." </i>
-                <i class="mobileText">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam justo ante, ullamcorper non accumsan ac, tempor non ex." </i>
-                <img class="personImg" src="media/images/referencer/person4.jpg">
+                <div class="main__imgContainer">
+                    <img data-tag="altan" src="/media/images/gallery/altansort.jpeg" alt="Altan">
 
-        </div>
-        <div class="text">
-           
-            <h1>Citat fra tidligere kunder</h1>
-     
-        <div id="textDisplay">
-           
-        </div>
-    </div>
-    <div></div>
-    </div>
-    <img class="infographic" src="/media/images/referencer/infographic.png" alt="infografik">
-    <img class="infographicMobile" src="media/images/referencer/infographicMobile.png" alt="infographicMobile">
+                    <img data-tag="altan" src="/media/images/gallery/altanbil.png" alt="Altan">
+
+                    <img data-tag="altan" src="/media/images/gallery/gelander.png" alt="Altan">
+
+                    <img data-tag="altan" src="/media/images/gallery/gelander3.png" alt="Altan">
+
+                    <img data-tag="special" src="/media/gallery/images/bro1.png" alt="bro">
+
+                    <img data-tag="trappe" src="/media/images/gallery/trappenedgang.png" alt="trappe">
+
+                    <img data-tag="trappe" src="/media/images/gallery/trappeopgang.png" alt="trappe">
+
+                    <img data-tag="special" src="/media/images/gallery/toender1.jpg" alt="toender">
+
+                    <img data-tag="special" src="/media/images/gallery/toender2.png" alt="Toender">
+
+                    <img data-tag="special" src="/media/images/gallery/toender3.png" alt="Toender1">
+
+                    <img data-tag="special" src="/media/images/gallery/drstudie1.png" alt="DR studiet">
+
+                    <img data-tag="special" src="/media/images/gallery/drstudie3.png" alt="DR studiet">
+                </div>
+            </div>
         </main>
 
     </div>
-
     <footer>
         <div class="footer__itemWrapper">
             <div class="footer__adress">
@@ -129,3 +139,5 @@
         </div>
     </footer>
 </body>
+
+</html>
