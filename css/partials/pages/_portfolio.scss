@@ -21,10 +21,15 @@
             padding: 10px;
             font-size: 16px;
             width:200px;
+            transition:200ms;
+            cursor:pointer;
             &:hover {
-                background:rgb(231, 231, 231);
-                color:black;
+                text-decoration: underline;
             }
+        }
+        .filter--active {
+            background:rgb(245, 245, 245);
+            color:black;
         }
     }
     
