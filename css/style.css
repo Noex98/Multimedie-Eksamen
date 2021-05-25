@@ -1,3 +1,30 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  color: #e4e4e4;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+:root {
+  --footer-height:px;
+}
+
 @-webkit-keyframes navLinkFade {
   0% {
     opacity: 0;
@@ -92,33 +119,6 @@
   }
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Raleway', sans-serif;
-  color: #e4e4e4;
-}
-
-html {
-  scroll-behavior: smooth;
-  height: 100%;
-}
-
-body {
-  height: 100%;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-:root {
-  --footer-height:px;
-}
-
 header {
   position: fixed;
   width: 100%;
@@ -153,7 +153,7 @@ header div {
 }
 
 header img {
-  height: 48px;
+  height: 64px;
 }
 
 header nav {
@@ -169,9 +169,13 @@ header nav ul {
       justify-content: space-around;
 }
 
+header nav ul li:hover {
+  text-decoration: underline;
+}
+
 .header--scrolled {
   background-color: rgba(0, 0, 0, 0.589);
-  padding: 24px 24px;
+  padding: 20px 20px;
   font-size: 1.1rem;
 }
 
@@ -327,6 +331,18 @@ footer .footer__some .some__imgCont {
 footer .footer__some .some__imgCont img {
   margin: 12px;
   width: 64px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 12px 15px -8px black;
+          box-shadow: 0 12px 15px -8px black;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+footer .footer__some .some__imgCont img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media only screen and (max-width: 768px) {
@@ -341,6 +357,27 @@ footer .footer__some .some__imgCont img {
   }
 }
 
+.banner {
+  background-blend-mode: darken;
+  background-position: center;
+  max-width: 100%;
+  height: 50vh;
+  background-size: cover;
+  min-height: 450px;
+  position: relative;
+}
+
+.banner .bannertext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .gallery__main .banner {
   background-image: url(/media/images/gallery/pexels-josiah-farrow-3396668.jpg);
   background-color: rgba(0, 0, 0, 0.363);
@@ -349,14 +386,6 @@ footer .footer__some .some__imgCont img {
   max-width: 100%;
   height: 50vh;
   background-size: cover;
-}
-
-.gallery__main .bannertext {
-  max-width: 500px;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 20vh;
-  position: relative;
 }
 
 .gallery__main img {
@@ -392,6 +421,7 @@ footer .footer__some .some__imgCont img {
   background-blend-mode: multiply,multiply;
   -webkit-box-shadow: 0 12px 15px -8px black;
           box-shadow: 0 12px 15px -8px black;
+  font-size: 16px;
 }
 
 .gallery__main button:hover {
@@ -403,21 +433,8 @@ footer .footer__some .some__imgCont img {
 }
 
 .referencer__main .banner {
-  background-image: url(/media/images/referencer/stair.jpg);
+  background-image: url("../media/images/referencer/stair.jpg");
   background-color: rgba(0, 0, 0, 0.363);
-  background-blend-mode: darken;
-  background-position: bottom;
-  max-width: 100%;
-  height: 50vh;
-  background-size: cover;
-}
-
-.referencer__main .bannertext {
-  max-width: 500px;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 20vh;
-  position: relative;
 }
 
 .referencer__main .infographic {
@@ -581,19 +598,6 @@ footer .footer__some .some__imgCont img {
 .partner__main .banner {
   background-image: url("../media/images/partner/pexels-magda-ehlers-2569844.jpg");
   background-color: rgba(0, 0, 0, 0.363);
-  background-blend-mode: darken;
-  background-position: center;
-  max-width: 100%;
-  height: 50vh;
-  background-size: cover;
-}
-
-.partner__main .bannertext {
-  max-width: 500px;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 20vh;
-  position: relative;
 }
 
 .partner__main img {
@@ -660,89 +664,110 @@ footer .footer__some .some__imgCont img {
   }
 }
 
-.kontaktinfo {
-  margin-left: 50px;
-  margin-top: 80px;
-  margin-bottom: 40px;
-  font-size: 1.3rem;
-  text-align: center;
+.contact__main {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(0, 0, 0, 0.15))), radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
+  background-blend-mode: multiply,multiply;
 }
 
-.telefon {
-  max-width: 8%;
-  max-height: 8%;
-  margin-bottom: 500px;
-  margin-top: 30px;
+.contact__main .banner {
+  background-image: url("../media/images/contact/svej.jpg");
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.mail {
-  max-width: 8%;
-  max-width: 8%;
-  margin-left: 100px;
-  margin-bottom: 500px;
-}
-
-.main_intro {
-  position: relative;
-  height: 100px;
+.contact__main .main__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 12px;
+  height: 50vh;
   -webkit-box-align: center;
+      -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(0, 0, 0, 0.363);
-  background-blend-mode: darken;
-  background-image: url("media/images/gallery/svej.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
 
-.kontakt__main .main_intro {
-  position: relative;
-  height: 100vh;
+.contact__main .main__info div {
+  background-color: #cfcfcf;
+  border-radius: 3px;
+  padding: 36px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-image: url("../media/images/gallery/svejs.jpg");
-  background-size: cover;
-  background-position: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 12px 15px -8px black;
+          box-shadow: 0 12px 15px -8px black;
 }
 
-.billede {
-  position: relative;
+.contact__main .main__info div img {
+  width: 100%;
+  max-width: 200px;
+  padding-bottom: 36px;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.contact__main .main__info div img:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.contact__main .main__info div p {
   text-align: center;
-  color: white;
+  color: black;
+  font-size: 1.5rem;
 }
 
-.billede1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 1.3rem;
+.contact__main .main__map .map__header {
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+.contact__main .main__map #map {
+  height: 50vh;
+}
+
+.contact__main .main__map #map .marker {
+  background-image: url("../media/images/contact/mapbox-icon.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.contact__main .main__map #map .mapboxgl-popup {
+  max-width: 200px;
+}
+
+.contact__main .main__map #map .mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: black;
 }
 
 @media only screen and (max-width: 768px) {
-  .kontaktinfo {
-    text-align: center;
-    display: block;
-    max-width: 100%;
+  .contact__main .main__info {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  .kontaktinfo p {
-    text-align: center;
-    display: block;
+  .contact__main .main__info div {
+    margin: 30px auto;
   }
 }
 
@@ -850,7 +875,7 @@ footer .footer__some .some__imgCont img {
 }
 
 .index__main .main__video .video__short {
-  max-height: 75vh;
+  max-height: 70vh;
   overflow: hidden;
 }
 
@@ -999,6 +1024,9 @@ footer .footer__some .some__imgCont img {
   }
   .index__main .main__gallery #nextBtn, .index__main .main__gallery #prevBtn {
     display: none;
+  }
+  .index__main .main__gallery #slider {
+    overflow-x: scroll;
   }
 }
 /*# sourceMappingURL=style.css.map */

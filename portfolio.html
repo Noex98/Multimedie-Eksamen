@@ -22,89 +22,104 @@
     <script type="module" src="./js/headerFooter.js"></script>
     <script defer src="./js/portfolio.js"></script>
 
+    <!-- Other -->
 </head>
 
 <body>
-    <div class="body__wrapper">
-        <header>
-            <div>
-                <a href="/">
-                    <img src="./media/images/logoHvid.png" alt="Logo">
-                </a>
-            </div>
-            <nav>
-                <ul class="nav__links">
-                    <li>
-                        <a href="./portfolio.html">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="./references.html">Referencer</a>
-                    </li>
-                    <li>
-                        <a href="./partners.html">Partnere</a>
-                    </li>
-                    <li>
-                        <a href="./contact.html">Kontakt</a>
-                    </li>
-                </ul>
-            </nav>
+    <header>
+        <div>
+            <a href="/">
+                <img src="./media/images/logoHvid.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li>
+                    <a href="./portfolio.html">Portfolio</a>
+                </li>
+                <li>
+                    <a href="./references.html">Referencer</a>
+                </li>
+                <li>
+                    <a href="./partners.html">Partnere</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
 
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </header>
-        <div id="htmlOverlay" class="htmlOverlay"></div>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </header>
+    <main class="gallery__main">
+    <div id="htmlOverlay" class="htmlOverlay"></div>
+    <div class="banner">
+        <div class="bannertext">
+            <h1>Portfolio</h1>
+        <p>    Efter mange års erfaring, har jeg jeg lavet mange projekter.
+            Her ser du et udsnit af hvad jeg kan lave.</p>
+    </div>
+    </div>
+ 
+    </div>
 
-        <main class="portfolio__main">
 
-            <div class="banner">
-                <div class="bannertext">
-                    <h1>Portfolio</h1>
-                    <p> 
-                        Efter mange års erfaring, har jeg jeg lavet mange projekter.
-                        Her ser du et udsnit af hvad jeg kan lave.
-                    </p>
-                </div>
-            </div>
-            <div class="main__bgWrap">
-                <div class="main__btnContainer">
-                    <button>Alle</button> 
-                    <button data-tag="trappe">Trapper</button> 
-                    <button data-tag="altan">Altaner</button> 
-                    <button data-tag="special">Special</button> 
-                </div>
 
-                <div class="main__imgContainer">
-                    <img data-tag="altan" src="/media/images/gallery/altansort.jpeg" alt="Altan">
 
-                    <img data-tag="altan" src="/media/images/gallery/altanbil.png" alt="Altan">
 
-                    <img data-tag="altan" src="/media/images/gallery/gelander.png" alt="Altan">
+    <!-- Portfolio-->
 
-                    <img data-tag="altan" src="/media/images/gallery/gelander3.png" alt="Altan">
+    <div class="fiterBtnContainer">
 
-                    <img data-tag="special" src="/media/gallery/images/bro1.png" alt="bro">
+       <button class="button"><div class="btn1" onclick="filterImg('picture')" class="filterBtn">
+            Alle
+        </div></button> 
+        <button class="button"><div class="btn2" onclick="filterImg('trappe')" class="filterBtn">
+            Trapper
+        </div></button> 
+        <button class="button"><div class="btn3" onclick="filterImg('altan')" class="filterBtn">
+            Altaner
+        </div></button> 
+        <button class="button"><div class="btn4" onclick="filterImg('special')" class="filterBtn">
+            Special
+        </div></button> 
+    </div>
 
-                    <img data-tag="trappe" src="/media/images/gallery/trappenedgang.png" alt="trappe">
+    <div class="container_portfolio">
+        <img class="picture altan" src="/media/images/gallery/altan.JPEG" alt="Altan" style="width:360px">
 
-                    <img data-tag="trappe" src="/media/images/gallery/trappeopgang.png" alt="trappe">
+        <img class="picture altan" src="/media/images/gallery/altansort.jpeg" alt="Altan" style="width:360px">
 
-                    <img data-tag="special" src="/media/images/gallery/toender1.jpg" alt="toender">
+        <img class="picture altan" src="/media/images/gallery/altangelander.jpg" alt="Altan" style="width:360px">
 
-                    <img data-tag="special" src="/media/images/gallery/toender2.png" alt="Toender">
+        <img class="picture altan" src="/media/images/gallery/altanhus.jpg" alt="Altan" style="width:360px">
 
-                    <img data-tag="special" src="/media/images/gallery/toender3.png" alt="Toender1">
+        <img class="picture special" src="/media/images/gallery/bro.jpg" alt="bro" style="width:360px">
 
-                    <img data-tag="special" src="/media/images/gallery/drstudie1.png" alt="DR studiet">
+        <img class="picture trappe" src="/media/images/gallery/trappe.JPG" alt="trappe" style="width:360px">
 
-                    <img data-tag="special" src="/media/images/gallery/drstudie3.png" alt="DR studiet">
-                </div>
-            </div>
-        </main>
+        <img class="picture trappe" src="/media/images/gallery/trappe2.jpeg" alt="trappe" style="width:360px">
+
+        <img class="picture special" src="/media/images/gallery/toender.jpg" alt="toender" style="width:360px">
+
+        <img class="picture special" src="/media/images/gallery/toender1.jpg" alt="Toender" style="width:360px">
+
+        <img class="picture special" src="/media/images/gallery/toender1-kopi.jpg" alt="Toender1" style="width:360px">
+
+        <img class="picture special" src="/media/images/gallery/dr1.jpeg" alt="DR studiet" style="width:360px">
+
+        <img class="picture special" src="/media/images/gallery/IMG_3611.jpeg" alt="DR studiet" style="width:360px">
 
     </div>
+
+
+    </main>
+
+
     <footer>
         <div class="footer__itemWrapper">
             <div class="footer__adress">
