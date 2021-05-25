@@ -1,58 +1,43 @@
-.portfolio__main {
+
+.gallery__main {
+
+  
     .banner{
-        background-image: url("../media/images/contact/svej.jpg");
-        background-color:rgba(0, 0, 0, 0.4);
+        background-image: url(/media/images/gallery/pexels-josiah-farrow-3396668.jpg);
+        background-color:rgba(0, 0, 0, 0.363);
     }
-    .main__bgWrap {
-        background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-        background-blend-mode: multiply,multiply;
+    img{
+        margin: 10px;
+        height: 300px;
+
     }
-    .main__btnContainer {
-        height:100px;
-        display:flex;
+    .main__btnContainer{
+        display: flex;
         justify-content: space-around;
-        align-items: center;
-        flex-wrap:wrap;
+        margin: 50px 0;
         button {
-            border: 1px solid black;
-            background-color: black;
-            height:fit-content;
-            color: white;
-            padding: 10px;
+            font-family: 'Raleway', sans-serif;
+            padding: 12px;
+            width: 100px;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+            background-blend-mode: multiply,multiply;
+            box-shadow: 0 12px 15px -8px black;
             font-size: 16px;
-            width:200px;
-            transition:200ms;
-            cursor:pointer;
             &:hover {
-                text-decoration: underline;
+                background-color: grey;
             }
         }
-        .filter--active {
-            background:rgb(245, 245, 245);
-            color:black;
-        }
     }
-    
-
     .main__imgContainer {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-around;
         img {
-            margin: 10px;
-            vertical-align: baseline;
-            width:360px;
+            width:360px
         }
     }
-
-    .picture3 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate( -50%, -50%);
-        font-size: 1.5rem;
-    }
-
-    
-
-
 }
+
+
+
+
