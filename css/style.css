@@ -397,20 +397,20 @@ footer .footer__some .some__imgCont img:hover {
   margin: 50px 0;
 }
 
+.gallery__main .main__btnContainer .filter--active {
+  border-color: black grey grey black;
+  background-color: white;
+}
+
 .gallery__main .main__btnContainer button {
+  color: black;
   font-family: 'Raleway', sans-serif;
   padding: 12px;
   width: 100px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)), to(rgba(0, 0, 0, 0.15))), radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
-  background-blend-mode: multiply,multiply;
-  -webkit-box-shadow: 0 12px 15px -8px black;
-          box-shadow: 0 12px 15px -8px black;
   font-size: 16px;
-}
-
-.gallery__main .main__btnContainer button:hover {
-  background-color: grey;
+  border-width: 2px;
+  border-style: solid;
+  border-color: grey black black grey;
 }
 
 .gallery__main .main__imgContainer {

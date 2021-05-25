@@ -11,21 +11,29 @@
         height: 300px;
 
     }
+    .main__bgWrap {
+        background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+        background-blend-mode: multiply,multiply;
+    }
     .main__btnContainer{
         display: flex;
         justify-content: space-around;
         margin: 50px 0;
+
+        .filter--active{
+            border-color: black grey grey black;
+            background-color: white;
+        }
         button {
+            color: black;
             font-family: 'Raleway', sans-serif;
             padding: 12px;
             width: 100px;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
-            background-blend-mode: multiply,multiply;
-            box-shadow: 0 12px 15px -8px black;
             font-size: 16px;
-            &:hover {
-                background-color: grey;
-            }
+            border-width: 2px;
+            border-style:solid;
+            border-color: grey black black grey;
+            
         }
     }
     .main__imgContainer {
