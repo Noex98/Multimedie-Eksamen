@@ -96,21 +96,22 @@
             color: black;
             display: block;
             text-align: center;
-            max-width: 50%;
-            margin-top: 30px;
+            width: 50vw;
             padding: 10px;
         }
         .text{ display: none;}
 
         .imgContainer{
-         flex-direction: row;
+         display: flex;
+         flex: wrap;
          width: 100%;
-         align-self: center;
          padding: 0;
         }
         .imgContainer img{
-            width: 50%;
+            width: 50vw;
+            height: 100%;
         }
+       
         .referenceContainer{
             height: auto;
         }
