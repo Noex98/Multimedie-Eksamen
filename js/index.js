@@ -21,9 +21,9 @@ const prevBtn = document.getElementById('prevBtn');
 const slider = document.getElementById('slider');
 
 nextBtn.addEventListener('click', () => {
-    slider.scrollLeft = slider.scrollLeft + slider.offsetWidth;
+    slider.scrollLeft = slider.scrollLeft + slider.offsetWidth * 0.5;
 })
 
 prevBtn.addEventListener('click', () => {
-    slider.scrollLeft = slider.scrollLeft - slider.offsetWidth;
+    slider.scrollLeft = slider.scrollLeft - slider.offsetWidth * 0.5;
 })
