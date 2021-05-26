@@ -112,6 +112,11 @@ header {
                     opacity:0;
                 }
             }
+            .navLink--active{
+                a{
+                    font-size:1.5rem;
+                }
+            }
         }
     }
 }
